@@ -1,0 +1,15 @@
+--- 
+ 
+ - name: Provision an EC2 Instance
+    hosts: local
+    connection: local
+    gather_facts: False
+    tags: provisioning
+    # Necessary Variables for creating/provisioning the EC2 Instance
+    vars:
+      instance_type: t1.micro
+      security_group: sg-0b6124b49dd0dd18d
+      image: RHEL-7.6_HVM_GA-20181017-x86_64-0-Hourly2-GP2 (ami-0b500ef59d8335eee)
+      region: us-east-2b
+      keypair: ansible
+      count: 1
